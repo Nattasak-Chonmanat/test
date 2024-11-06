@@ -24,8 +24,10 @@ async function verifyUser(username, password) {
         }
 
         const data = await response.json();
+        call_api(data)
         displayResult(data);
     } catch (error) {
+        window.alert("Error: ไม่สามารถ login ได้")
         console.error("Error during API call:", error);
         displayError("An error occurred while verifying the user.");
     }
@@ -68,3 +70,28 @@ document.getElementById("verificationForm").addEventListener("submit", function(
     const password = document.getElementById("password").value;
     verifyUser(username, password);
 });
+
+async function  call_api(data) {
+    const headers = {
+        "Content-Type": "application/json"
+    };
+
+    const body = JSON.stringify({
+        email: data.email,
+        engName: data.displayname_en,
+        userName: data.username,
+        type : data.type,
+        faculty: data.faculty
+    });
+
+    const url = "http://localhost:8080/api/students/add"
+
+        const response = await fetch(url, {
+            method: "POST",
+            headers: headers,
+            body: body,
+        });
+        console.log(response.status)
+ 
+
+}
