@@ -1,0 +1,81 @@
+/* Reset some default styles */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* Light background */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.login-container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width for the form */
+    margin-bottom: 10px;
+}
+
+.result-container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width for the form */
+    display: none;
+}
+
+h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px;
+    color: #333; /* Dark color for text */
+}
+
+input[type="text"], input[type="password"] {
+    width: 93%; /* Full width inputs */
+    padding: 10px;
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+p {
+    margin-top: 15px;
+    color: #555; /* Dark gray for text */
+}
+
+a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
